@@ -16,7 +16,12 @@
     <p>Food: <%= @event.includes_food ? "Provided" : "Not provided" %></p>
     <p>Drinks: <%= @event.includes_drinks ? "Provided" : "Not provided" %></p>
 
-    <!-- Amenities -->
+    <!-- Categories -->
+
+    <h4>Categories</h4>
+<% @categories.each do |category| %>
+  <span class="label label-success"><%= category.name %></span>
+<% end %>
 
   </div>
 
