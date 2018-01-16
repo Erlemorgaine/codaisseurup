@@ -2,13 +2,9 @@ class Event < ApplicationRecord
 
   belongs_to :user
 
-  validates :address, presence: true
-  validates :home_type, presence: true
-  validates :room_type, presence: true
-  validates :accommodate, presence: true
-  validates :bedroom_count, presence: true
-  validates :bathroom_count, presence: true
-  validates :listing_name, presence: true, length: { maximum: 50 }
+  validates :name, presence: true
   validates :description, presence: true, length: { maximum: 500 }
+  validates :starts_at, presence: true
+  #validates :ends_at, presence: true, inclusion: {in: (:start_at + 1.days..:start_at + 5.years)}
 
 end
