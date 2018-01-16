@@ -1,0 +1,25 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @event.name %></div>
+
+  <div class="panel-body">
+
+    <p>Location: <%= @event.location %></p>
+    <p>Date: <%= @event.starts_at %> - <%= @event.ends_at %></p>
+
+    <!-- About -->
+    <h4>About</h4>
+    <p><%= @event.description %></p>
+
+    <!-- Additional Info -->
+    <h4>Additional Info</h4>
+
+    <p>Food: <%= @event.includes_food ? "Provided" : "Not provided" %></p>
+    <p>Drinks: <%= @event.includes_drinks ? "Provided" : "Not provided" %></p>
+
+    <!-- Amenities -->
+
+  </div>
+
+</div>
+
+<%= link_to "Back", events_path, class: "btn btn-default" %>
