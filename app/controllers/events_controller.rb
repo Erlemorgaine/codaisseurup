@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   def create
     @event = current_user.events.build(event_params)
 
-    if @event.save
+    if @event.save!
       redirect_to @event, notice: "event created"
     else
       render :new
@@ -45,7 +45,7 @@ class EventsController < ApplicationController
     params
       .require(:event)
       .permit(
-        :name, :description, :location, :price, :capacity, :includes_food, :includes_drinks, :starts_at, :ends_at, :active, theme_ids: [])
+        :name, :description, :location, :price, :capacity, :includes_food, :includes_drinks, :starts_at, :ends_at, :active, :event_type, category_ids: [])
   end
 
 end
