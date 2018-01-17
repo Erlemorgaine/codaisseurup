@@ -7,8 +7,8 @@ FactoryBot.define do
     capacity          100
     includes_food     true
     includes_drinks   true
-    starts_at         { Faker::Date }
-    ends_at           { Faker::Date }
+    starts_at         { Faker::Date.forward(4) }
+    ends_at           { Faker::Date.forward(5) }
     user              { build(:user) }
     event_type        { Faker::Lorem.words(1) }
 
