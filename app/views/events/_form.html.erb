@@ -6,12 +6,12 @@
 
   <div class="form-group">
     <label>Number of People</label>
-    <%= f.number_field :price, placeholder: "Maximum capacity", class: "form-control" %>
+    <%= f.number_field :capacity, placeholder: "Maximum capacity", class: "form-control" %>
   </div>
 
   <div class="form-group">
     <label>Price per person</label>
-    <%= f.number_field :capacity, placeholder: "Price in euros", class: "form-control" %>
+    <%= f.number_field :price, placeholder: "Price in euros", class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -26,7 +26,7 @@
 
   <div class="form-group">
     <label>Date of event</label>
-    <%= f.text_field :starts_at, placeholder: "Event date", class: "form-control" %>
+    <%= f.date_field :starts_at, placeholder: "Event date", class: "form-control" %>
   </div>
 
   <div class="form-group">

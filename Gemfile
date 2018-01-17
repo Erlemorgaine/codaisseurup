@@ -54,3 +54,10 @@ gem 'jquery-rails', '~> 4.3.1'
 
 #Use devise for authentication
 gem 'devise', '~> 4.2'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'capybara', '~> 2.9', '>= 2.9.1'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
