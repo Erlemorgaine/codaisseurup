@@ -1,4 +1,13 @@
 <%= form_for @event do |f| %>
+
+  <div class="form-group">
+    <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+
   <div class="form-group">
     <label>Event Type</label>
     <%= f.select :event_type, [["Music", "Music"], ["Art", "Art"], ["Theatre", "Theatre"]], id: "event_type", prompt: "Select event type", class: "form-control" %>
