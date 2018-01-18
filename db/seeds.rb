@@ -1,5 +1,7 @@
+Photo.destroy_all
 Category.destroy_all
 Event.destroy_all
+Profile.destroy_all
 User.destroy_all
 
 art = Category.create(name: "Art")
