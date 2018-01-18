@@ -26,7 +26,7 @@
 
     <h4>Photos</h4>
     <% @event.photos.each do |photo| %>
-      <%= image_tag photo.image %>
+      <%= image_tag photo.image.thumbnail %>
     <% end %>
 
   </div>
