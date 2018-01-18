@@ -8,8 +8,8 @@ class Event < ApplicationRecord
   validates :location, presence: true
   validates :price, presence: true
   validates :capacity, presence: true
-  validates :includes_food, presence: true
-  validates :includes_drinks, presence: true
+  #validates :includes_food, presence: true
+  #validates :includes_drinks, presence: true
   validates :starts_at, presence: true
   validates :ends_at, presence: true
   #validates :ends_at, presence: true, inclusion: {in: ((:starts_at + 1.days)..(:starts_at + 5.years))}
