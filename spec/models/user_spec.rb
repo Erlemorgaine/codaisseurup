@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
     let(:host_user) { create :user, email: "host@user.com" }
 
     let!(:event) { create :event, user: host_user }
-    let!(:booking) { create :booking, event: event, user: visitor_user }
+    let!(:booking) { create :booking, event: event, user: visitor_user, guest_count: 2 }
 
     it "has bookings" do
       expect(visitor_user.booked_events).to include(event)
