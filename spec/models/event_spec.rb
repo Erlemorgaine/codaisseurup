@@ -58,6 +58,18 @@ RSpec.describe Event, type: :model do
         end
       end
 
+      describe "association with booking" do
+        let(:visitor_user) { create :user, email: "visitor@user.com"}
+        let(:host_user) { create :user, email: "host@user.com"}
+        let(:event) { create :event, user: host_user}
+        let(:booking) { create :booking, event: event, user: visitor_user }
+
+        it "has visitors" do
+          expect(event.visitors).to include(visitor_user)
+        end
+
+      end
+
     end
 
   end

@@ -28,6 +28,4 @@ describe "shared/_navbar.html.erb" do
     end
   end
 
-  end
-
 end

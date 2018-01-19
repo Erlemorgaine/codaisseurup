@@ -18,4 +18,16 @@ RSpec.describe User, type: :model do
       expect { user.destroy }.to change(Event, :count).by(-1)
     end
   end
+
+  describe "association with booking" do
+    let(:visitor_user) { create :user, email: "visitor@user.com" }
+    let(:host_user) { create :user, email: "host@user.com" }
+
+    let!(:event) { create :event, user: host_user }
+    let!(:booking) { create :booking, event: event, user: visitor_user }
+
+    it "has bookings" do
+      expect(visitor_user.booked_events).to include(event)
+    end
+  end
 end
