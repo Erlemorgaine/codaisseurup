@@ -5,6 +5,8 @@ class EventsController < ApplicationController
 
   def index
     @events = current_user.events
+    @events_current_capacity = Event.current_capacity
+    @events_count = events_count
   end
 
   def show
@@ -54,6 +56,14 @@ class EventsController < ApplicationController
 
   def set_event
     @event = Event.find(params[:id])
+  end
+
+  def events_current_capacity
+    Event.current_capacity
+  end
+
+  def events_count
+    Event.count_events
   end
 
   def event_params
