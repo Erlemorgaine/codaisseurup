@@ -21,9 +21,11 @@
             <%= link_to "View", event, class: "btn btn-default" %>
             <%= link_to "Update", edit_event_path(event), class: "btn btn-default" %>
           </div>
+          <br/>
         </div>
         <% end %>
-
+        <div>Total events: <%= @events_count%> </div>
+        <div>Maximum capacity of your events: <%= @events_current_capacity%> </div>
       </div>
     </div>
 

@@ -12,4 +12,10 @@ Rails.application.routes.draw do
   resources :photos, only: [:destroy]
   get "about" => "pages#about"
 
+  namespace :api do
+    resources :events do
+      resources :bookings, only: [:create, :update]
+    end
+  end
+
 end

@@ -1,0 +1,20 @@
+<%= form_for [@event, @event.bookings.new] do |f| %>
+  <p><strong>Price:</strong> <span>€</span> <%= @event.price %></p>
+
+  <hr>
+
+  <div class="form-group">
+    <label>Number of visitors</label>
+    <%= f.number_field :guest_count, placeholder: "Maximum three", class: "form-control" %>
+  </div>
+
+  <!-- <div class="form-group">
+    <%= f.check_box :status %> Status
+  </div> -->
+
+  <p><strong>Total price:</strong> <span>€</span> <%= :total %></p>
+
+  <div class="actions">
+    <%= f.submit "Book Now", class: "btn btn-success" %>
+  </div>
+<% end %>
